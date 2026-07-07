@@ -11,11 +11,12 @@ class Solution:
         #
         # Pre-activation: z = dot(x, w) + b
         z=np.dot(x,w)+b
+        # Sigmoid: σ(z) = 1 / (1 + exp(-z))
+
         if activation=='sigmoid':
             ans= 1/(1+np.exp(-z))
+        # ReLU: max(0, z)
         else:
             ans=max(0.0,z)
         return np.round(ans,5)
-        # Sigmoid: σ(z) = 1 / (1 + exp(-z))
-        # ReLU: max(0, z)
-        # return round(your_answer, 5)
+
