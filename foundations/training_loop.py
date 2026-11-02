@@ -11,7 +11,7 @@ class Solution:
         # lr: learning rate
         #
         n=len(X)
-        w=np.array([0]*len(X[0]))
+        w=np.zeros(X.shape[1])
         b=0
         for e in range(epochs):
             y_hat = X @ w + b
